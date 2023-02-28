@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D5CA3BC29AEA23F00304A75 /* DigitalRainSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5CA3BB29AEA23F00304A75 /* DigitalRainSaverView.h */; };
-		7D5CA3BE29AEA23F00304A75 /* DigitalRainSaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5CA3BD29AEA23F00304A75 /* DigitalRainSaverView.m */; };
+		7D5CA3C529AEA39B00304A75 /* matrix in Resources */ = {isa = PBXBuildFile; fileRef = 7D5CA3C429AEA39B00304A75 /* matrix */; };
+		7D5CA3C729AEA4CB00304A75 /* DigitalRainSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5CA3C629AEA4CB00304A75 /* DigitalRainSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D5CA3B829AEA23F00304A75 /* DigitalRainSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalRainSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D5CA3BB29AEA23F00304A75 /* DigitalRainSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalRainSaverView.h; sourceTree = "<group>"; };
-		7D5CA3BD29AEA23F00304A75 /* DigitalRainSaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalRainSaverView.m; sourceTree = "<group>"; };
+		7D5CA3C429AEA39B00304A75 /* matrix */ = {isa = PBXFileReference; lastKnownFileType = folder; path = matrix; sourceTree = "<group>"; };
+		7D5CA3C629AEA4CB00304A75 /* DigitalRainSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalRainSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +31,7 @@
 		7D5CA3AE29AEA23F00304A75 = {
 			isa = PBXGroup;
 			children = (
+				7D5CA3C429AEA39B00304A75 /* matrix */,
 				7D5CA3BA29AEA23F00304A75 /* DigitalRainSaver */,
 				7D5CA3B929AEA23F00304A75 /* Products */,
 			);
@@ -47,8 +48,7 @@
 		7D5CA3BA29AEA23F00304A75 /* DigitalRainSaver */ = {
 			isa = PBXGroup;
 			children = (
-				7D5CA3BB29AEA23F00304A75 /* DigitalRainSaverView.h */,
-				7D5CA3BD29AEA23F00304A75 /* DigitalRainSaverView.m */,
+				7D5CA3C629AEA4CB00304A75 /* DigitalRainSaver.swift */,
 			);
 			path = DigitalRainSaver;
 			sourceTree = "<group>";
@@ -60,7 +60,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5CA3BC29AEA23F00304A75 /* DigitalRainSaverView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +95,7 @@
 				TargetAttributes = {
 					7D5CA3B729AEA23F00304A75 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -122,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5CA3C529AEA39B00304A75 /* matrix in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5CA3BE29AEA23F00304A75 /* DigitalRainSaverView.m in Sources */,
+				7D5CA3C729AEA4CB00304A75 /* DigitalRainSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +252,7 @@
 		7D5CA3C229AEA23F00304A75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -259,10 +261,18 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = DigitalRainSaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamieshorten.DigitalRainSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -270,6 +280,7 @@
 		7D5CA3C329AEA23F00304A75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -278,10 +289,17 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = DigitalRainSaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamieshorten.DigitalRainSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
